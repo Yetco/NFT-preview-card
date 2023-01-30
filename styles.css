@@ -1,0 +1,235 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  /* margin: 0 auto; */
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  max-width: 320px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card-content {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  /* height: 100px; */
+}
+
+.img-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 1rem;
+}
+
+.img-over img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.card-content:hover .img-over {
+  opacity: 1;
+}
+
+.card-image {
+  /* max-width: 360px; */
+
+  /* background-color: hsl(178, 100%, 50%); */
+  /* top: 0; */
+  /* width: 100%; */
+  /* height: 100%; */
+
+  border-radius: 1rem;
+}
+
+.card-image:hover {
+  opacity: 1;
+}
+
+.card-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-name {
+  color: hsl(0, 0%, 100%);
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.card-name:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.description {
+  color: hsl(215, 51%, 70%);
+}
+
+.flex-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reg-price {
+  color: hsl(178, 100%, 50%);
+}
+
+.reg-price[data-icon="eth-symbol"]::before {
+  content: "";
+  width: 11px;
+  height: 18px;
+  background-image: url(images/icon-ethereum.svg);
+  display: inline-flex;
+  margin-right: 0.3rem;
+}
+
+.days-left {
+  color: hsl(215, 51%, 70%);
+}
+
+.days-left[data-icon="clock"]::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-image: url(images/icon-clock.svg);
+  display: inline-flex;
+  margin-right: 0.3rem;
+}
+
+hr {
+  height: 2px;
+  background-color: hsl(215, 32%, 27%);
+  border: none;
+}
+
+.creator-name {
+  color: hsl(0, 0%, 100%);
+}
+
+.creator {
+  color: hsl(215, 51%, 70%);
+}
+
+.icon {
+  /* content: ""; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  /* display: inline-flex; */
+  margin-right: 0.7rem;
+}
+
+.creator-name {
+  margin-left: 0.2rem;
+}
+
+.creator-name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.footer {
+  color: hsl(215, 51%, 70%);
+  display: inline-flex;
+  /* margin-right: 1rem; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#ft-name {
+  color: red;
+}
